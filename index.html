@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earn Free Cash Instantly | Freecash Offers</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Background Animation */
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a1a1a, #222, #111);
+            z-index: -1;
+            animation: bg-move 10s infinite linear;
+        }
+
+        @keyframes bg-move {
+            0% {background-position: 0 0;}
+            100% {background-position: 1000px 1000px;}
+        }
+
+        /* Header */
+        header {
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 0px 10px #00ffcc;
+        }
+
+        header img {
+            width: 200px;
+            filter: drop-shadow(0px 0px 10px #00ffcc);
+        }
+
+        header h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #00ffcc;
+            text-shadow: 0px 0px 10px #00ffcc;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 50px 20px;
+        }
+
+        .main-content h2 {
+            font-size: 30px;
+            color: #ff00ff;
+            text-shadow: 0px 0px 10px #ff00ff;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: #dddddd;
+        }
+
+        /* Steps */
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .step {
+            width: 280px;
+            padding: 20px;
+            margin: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            border: 2px solid #ff00ff;
+            box-shadow: 0px 0px 15px #ff00ff;
+            text-align: center;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            color: #ff00ff;
+        }
+
+        .step p {
+            font-size: 16px;
+            color: #ccc;
+        }
+		.live-ticker {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffcc;
+            background: rgba(0, 255, 204, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #00ffcc;
+            margin-bottom: 20px;
+            display: block;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 40px 20px;
+            background: #111;
+            box-shadow: 0px 0px 20px #00ffcc;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            font-size: 22px;
+            background: linear-gradient(45deg, #ff00ff, #00ffcc);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px white;
+            box-shadow: 0px 0px 15px #ff00ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px #00ffcc;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 50px 20px;
+        }
+
+        .testimonial {
+            font-style: italic;
+            font-size: 18px;
+            color: #ffffff;
+            background: rgba(255, 0, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px;
+            box-shadow: 0px 0px 15px #ff00ff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #000;
+            box-shadow: 0px 0px 10px #00ffcc;
+        }
+
+        footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <!-- Header -->
+    <header>
+     
+        <h1>Earn Free Cash Instantly!</h1>
+    </header>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <h2>How to Earn Money</h2>
+        <p>Complete easy tasks & get paid instantly to your PayPal, Bitcoin, or Gift Cards!</p>
+
+        <div class="steps">
+            <div class="step">
+                <h3>1. Sign Up</h3>
+                <p>Join Freecash for free & start earning right away!</p>
+            </div>
+            <div class="step">
+                <h3>2. Complete Tasks</h3>
+                <p>Finish simple tasks, surveys, & app installs to earn cash.</p>
+            </div>
+            <div class="step">
+                <h3>3. Get Paid</h3>
+                <p>Withdraw your earnings instantly via PayPal, Bitcoin, or Gift Cards!</p>
+            </div>
+        </div>
+    </section>
+	  <section class="cta-section">
+        <div class="live-ticker" id="liveNotification">John just received $60 now!</div>
+        
+    </section>
+
+    <script>
+        const names = ["John", "Emily", "Mike", "Sophia", "James", "Olivia", "Daniel", "Ava", "Robert", "Emma"];
+        const amounts = [40, 50, 60, 70, 80, 90, 100, 120];
+
+        function updateNotification() {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const amount = amounts[Math.floor(Math.random() * amounts.length)];
+            const ticker = document.getElementById("liveNotification");
+            ticker.style.opacity = 0;
+            setTimeout(() => {
+                ticker.textContent = `${name} just received $${amount} now!`;
+                ticker.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(updateNotification, 5000);
+    </script>
+
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <button class="cta-button" onclick="window.location.href='signup.html'">Start Earning Now</button>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Users Say</h2>
+        <p class="testimonial">"I made $100 in just a few days! So easy and fast!" - Alex R.</p>
+        <p class="testimonial">"Freecash changed my life! I earn extra money daily." - Mia S.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Freecash | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a></p>
+    </footer>
+
+</body>
+</html>
